@@ -26,3 +26,11 @@ def persons_update(request, person_id):
         return redirect('persons_list')
     return render(request, 'person_form.html', {'form': form})
 
+
+def persons_delete(request, person_id):
+    person = get_object_or_404(Person, pk=person_id)
+
+    if request.method == 'POST':
+        person.delete()
+        return redirect('persons_list')
+    return render(request, 'person_delete_confirm.html', {'person': person})
