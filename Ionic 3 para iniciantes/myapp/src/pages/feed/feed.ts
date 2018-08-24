@@ -17,7 +17,7 @@ import { MoviesProvider } from '../../providers/movies/movies';
 export class FeedPage {
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private movieProvider: MoviesProvider
   ) {
@@ -37,5 +37,4 @@ export class FeedPage {
       }
     )
   }
-
 }
