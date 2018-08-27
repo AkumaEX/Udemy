@@ -21,7 +21,11 @@ export class MoviesProvider {
     return this.http.get(this.baseApiPath + "/movie/latest?api_key=" + this.api_key);
   }
 
-  getPopular() {
-    return this.http.get(this.baseApiPath + "/movie/popular?api_key=" + this.api_key)
+  getPopular(page) {
+    return this.http.get(this.baseApiPath + `/movie/popular?page=${page}&api_key=` + this.api_key);
+  }
+
+  getMovieDetails(filmeid) {
+    return this.http.get(this.baseApiPath + `/movie/${filmeid}?api_key=` + this.api_key);
   }
 }
