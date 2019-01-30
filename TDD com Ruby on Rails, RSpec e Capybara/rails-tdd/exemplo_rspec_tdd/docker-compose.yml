@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rspec:
+    image: ruby
+    container_name: rspec
+    volumes:
+      - .:/home
+    entrypoint: /bin/bash
+    working_dir: /home
+    user: 1000:1000
