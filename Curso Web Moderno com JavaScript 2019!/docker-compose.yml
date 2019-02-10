@@ -2,8 +2,9 @@ version: '3'
 
 services:
   nodejs:
-    image: node
+    build: .
     working_dir: /home
     volumes:
       - .:/home
-    command: bash
+    stdin_open: true
+    tty: true
