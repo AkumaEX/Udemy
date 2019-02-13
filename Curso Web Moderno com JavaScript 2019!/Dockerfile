@@ -1,5 +1,3 @@
 FROM node
-RUN apt-get update && apt-get install -y sudo
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-USER docker
+RUN npm i -g nodemon
 CMD /bin/bash
