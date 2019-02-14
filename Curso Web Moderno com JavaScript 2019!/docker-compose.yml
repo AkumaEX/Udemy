@@ -2,12 +2,14 @@ version: '3'
 
 services:
   nodejs:
-    build: .
-    working_dir: /home
+    image: node
+    working_dir: /home/src
     volumes:
-      - .:/home
+      - .:/home/src
+    command: bash
     stdin_open: true
     tty: true
     ports:
       - 8080:8080
+      - 3003:3003
     user: node
